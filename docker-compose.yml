@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+
+  mysql:
+    image: mysql:8
+    container_name: ecommerce-mysql
+
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+
+    ports:
+      - "${MYSQL_PORT}:3306"
+
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+    networks:
+      - ecommerce-network
+
+
+
+  ecommerce-app:
+    image: ecommerce-app:latest
+
+    container_name: ecommerce-application
+
+    depends_on:
+      - mysql
+
+    ports:
+      - "${APP_PORT}:8080"
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${MYSQL_DATABASE}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+
+    networks:
+      - ecommerce-network
+
+
+
+volumes:
+
+  mysql-data:
+
+
+networks:
+
+  ecommerce-network:
