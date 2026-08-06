@@ -1,6 +1,3 @@
-### UserServiceImpl.java
-
-```java
 package com.ecommerce.serviceImpl;
 
 import com.ecommerce.entity.User;
@@ -61,5 +58,5 @@ public class UserServiceImpl implements UserService {
 
 
 }
-```
+
 
