@@ -1,6 +1,3 @@
-### ProductController.java
-
-```java
 package com.ecommerce.controller;
 
 import com.ecommerce.entity.Product;
@@ -59,5 +56,5 @@ public class ProductController {
     }
 
 }
-```
+
 
