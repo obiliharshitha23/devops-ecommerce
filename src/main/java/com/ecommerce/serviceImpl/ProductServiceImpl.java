@@ -1,6 +1,3 @@
-### ProductServiceImpl.java
-
-```java
 package com.ecommerce.serviceImpl;
 
 import com.ecommerce.entity.Product;
@@ -56,5 +53,5 @@ public class ProductServiceImpl implements ProductService {
     }
 
 }
-```
+
 
