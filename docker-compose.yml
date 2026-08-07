@@ -24,7 +24,7 @@ services:
   ecommerce-app:
     image: harshithaobili/image_harshi:v1
 
-    container_name: ecommerce-app-v1
+    container_name: ecommerce-app-v
 
     depends_on:
       - mysql
