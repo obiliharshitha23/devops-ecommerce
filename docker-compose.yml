@@ -22,7 +22,7 @@ services:
 
 
   ecommerce-app:
-    image: ecommerce-app:latest
+    image: harshithaobili/image_harshi:v1
 
     container_name: ecommerce-application
 
