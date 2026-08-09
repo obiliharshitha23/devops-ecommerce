@@ -22,9 +22,9 @@ services:
 
 
   ecommerce-app:
-    image: harshithaobili/image_harshi:v1
+    image: harshithaobili/image_harshi:v11
 
-    container_name: ecommerce-www
+    container_name: ecommerce-application
 
     depends_on:
       - mysql
